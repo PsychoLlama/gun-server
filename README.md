@@ -5,11 +5,24 @@
 I write a bunch of these servers. This library takes 10 lines down to 1-2. What can I say, I'm lazy  :stuck_out_tongue_winking_eye:
 
 ## Usage
+You can download it by running this in your terminal:
+
+> If you don't have node and npm, you can get it [here](https://nodejs.org/en/download/)
+
+```bash
+$ npm install gun-server
+```
+
 It exports a function that take optional configuration and returns your gun instance.
 
 ```javascript
+// import the server function
 var startGunServer = require('gun-server')
+
+// use said function
 var gun = startGunServer()
+
+// by default, it'll listen on http://localhost:8080
 ```
 
 ### `server([Object|Number|Function])`
