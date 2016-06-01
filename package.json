@@ -1,0 +1,25 @@
+{
+  "name": "gun-server",
+  "version": "0.1.0",
+  "description": "Simple gun server",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/PsychoLlama/gun-server"
+  },
+  "keywords": [
+    "gun",
+    "gunDB",
+    "server",
+    "setup",
+    "realtime"
+  ],
+  "author": "Jesse Gibson <jesse@gundb.io> (http://techllama.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^2.11.1"
+  }
+}
