@@ -1,6 +1,9 @@
 # Gun-server
 *Simply start a gun server*
 
+[![Travis branch](https://img.shields.io/travis/PsychoLlama/gun-server/master.svg?style=flat-square)](https://travis-ci.org/PsychoLlama/gun-server)
+[![npm](https://img.shields.io/npm/dt/gun-server.svg?style=flat-square)](https://www.npmjs.com/package/gun-server)
+
 ## Why
 I write a bunch of these servers. This library takes 10 lines down to 1-2. What can I say, I'm lazy  :stuck_out_tongue_winking_eye:
 
