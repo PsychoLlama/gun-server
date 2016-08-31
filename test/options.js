@@ -1,3 +1,4 @@
+/* eslint-disable no-process-env*/
 /* globals describe, it*/
 'use strict';
 var optionize = require('../src/options');
@@ -26,10 +27,28 @@ describe('Optionize', function () {
 		expect(result.port).toBe(4200);
 	});
 
+	it('should set the port default to PORT', function () {
+		var original = process.env.PORT;
+		process.env.PORT = 3000;
+		var result = optionize();
+		expect(result.port).toBe(3000);
+		process.env.PORT = original;
+	});
+
+	it('should fall back to a default port', function () {
+		var result = optionize();
+		expect(result.port).toBe(8080);
+	});
+
 	it('should set `server` to Server input', function () {
 		var server = new Server();
 		var result = optionize(server);
 		expect(result.server).toBe(server);
+	});
+
+	it('should default to a new server', function () {
+		var result = optionize();
+		expect(result.server).toBeA(Server);
 	});
 
 	it('should set `options` when passed options', function () {
