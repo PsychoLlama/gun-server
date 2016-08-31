@@ -4,7 +4,7 @@
   "description": "Simple gun server",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,11 @@
   "author": "Jesse Gibson <jesse@gundb.io> (http://techllama.com)",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^2.11.1"
+    "eslint": "^3.4.0",
+    "expect": "^1.20.2",
+    "mocha": "^3.0.2"
   },
   "dependencies": {
-    "gun": "^0.3.92"
+    "gun": "^0.3.992"
   }
 }

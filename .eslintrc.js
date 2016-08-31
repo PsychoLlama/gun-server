@@ -176,7 +176,7 @@ module.exports = {
         "no-with": "error",
         "object-curly-spacing": [
             "error",
-            "never"
+            "always"
         ],
         "object-shorthand": "off",
         "one-var": "off",
@@ -206,7 +206,7 @@ module.exports = {
         "sort-imports": "error",
         "sort-vars": "off",
         "space-before-blocks": "error",
-        "space-before-function-paren": "off",
+        "space-before-function-paren": ["error", "always"],
         "space-in-parens": [
             "error",
             "never"

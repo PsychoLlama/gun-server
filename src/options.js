@@ -2,27 +2,34 @@
 
 var Server = require('http').Server;
 
-function patch (opt) {
-	var type = typeof opt;
+/**
+ * Provide defaults for config objects.
+ *
+ * @param  {Object|Number|Function} input - Options.
+ * @returns {Object} - The correctly formatted options.
+ */
+function patch (input) {
+	var type = typeof input;
+	var opt = (input instanceof Object) ? input : {};
+
+	// Port number.
 	if (type === 'number') {
-		opt = {
-			port: opt
-		};
+		opt.port = input;
 	}
+
+	// Request handler.
 	if (type === 'function') {
-		opt = {
-			handler: type
-		};
+		opt.handler = input;
 	}
-	if (opt instanceof Server) {
-		opt = {
-			server: opt
-		};
+
+	// HTTP server.
+	if (input instanceof Server) {
+		opt.server = input;
 	}
-	if (!(opt instanceof Object)) {
-		opt = {};
-	}
-	opt.options = opt.options || {};
+
+	// Gun constructor options.
+	opt.options = (input || {}).options;
+
 	return opt;
 }
 
